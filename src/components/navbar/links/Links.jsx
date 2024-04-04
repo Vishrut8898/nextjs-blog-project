@@ -48,8 +48,8 @@ const Links = () => {
             <button className={styles.menuButton} onClick={() => setOpen(prev => !prev)}>Menu</button>
             {open && (
                 <div className={styles.mobileLinks}>
-                    {links.map((link) => (
-                        <NavLink item={link}></NavLink>
+                    {links.map((link, i) => (
+                        <NavLink key={`link-${i}`} item={link}></NavLink>
                     ))}
                 </div>
             )}
